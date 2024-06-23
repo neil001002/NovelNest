@@ -2,8 +2,10 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Book from "./Book";
 import "./Book.css";
+// require("dotenv").config();
 
-const URL = "http://localhost:5000/books";
+const URL = "https://novel-nest-rho.vercel.app/books";
+// const URL = `${process.env.API_URL}/books`;
 
 const fetchBooks = async () => {
   return await axios.get(URL).then((res) => res.data);
